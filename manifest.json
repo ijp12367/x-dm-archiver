@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "X DM Archiver (On-Site)",
+  "version": "2.0",
+  "description": "Visually archive X.com DMs with on-site archive panel.",
+  "permissions": ["storage", "scripting", "activeTab"],
+  "host_permissions": ["https://x.com/messages/*", "https://twitter.com/messages/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/messages/*", "https://twitter.com/messages/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/icon128.png",
+      "48": "icons/icon128.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "X DM Archiver"
+  }
+}
